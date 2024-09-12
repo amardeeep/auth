@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+app.use(express.urlencoded({ extended: false }));
 const homeRouter = require("./routes/homeRouter");
 const dashRouter = require("./routes/dashRouter");
 const path = require("node:path");

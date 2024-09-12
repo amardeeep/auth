@@ -6,6 +6,19 @@
     <title><%=title%></title>
   </head>
   <body>
-    <form action="/sign-up" method="post">Sign-Up</form>
+    <form action="/sign-up" method="post">
+      Sign-Up
+      <label for="username">Username :</label>
+      <input type="text" name="username" id="username" />
+      <label for="firstname">First Name :</label>
+      <input type="text" name="firstname" id="firstname" />
+      <label for="lastname">Last Name :</label>
+      <input type="text" name="lastname" id="lastname" />
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" />
+      <label for="cpassword">Confrim Password :</label>
+      <input type="password" name="cpassword" id="cpassword" />
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
