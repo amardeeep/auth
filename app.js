@@ -1,4 +1,5 @@
 const express = require("express");
+const bcrypt = require("bcryptjs");
 const app = express();
 app.use(express.urlencoded({ extended: false }));
 const homeRouter = require("./routes/homeRouter");

@@ -1,4 +1,5 @@
 const db = require("../db/queries");
+const bcrypt = require("bcryptjs");
 const getHome = (req, res) => {
   res.render("home", { title: "Home" });
 };
@@ -11,7 +12,10 @@ const getSignup = (req, res) => {
 const postSignup = async (req, res) => {
   console.log(req.body);
   const { username, firstname, lastname, password } = req.body;
-  await db.createUser(username, firstname, lastname, password);
+  bcrypt.hash(password, 10, async (err, hashedPassword) => {
+    await db.createUser(username, firstname, lastname, hashedPassword);
+  });
+
   res.redirect("/");
 };
 module.exports = {
