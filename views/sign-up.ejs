@@ -7,7 +7,7 @@
   </head>
   <body>
     <form action="/sign-up" method="post">
-      Sign-Up
+      Sign-Up <%- include("errors.ejs") %>
       <label for="username">Username :</label>
       <input type="text" name="username" id="username" />
       <label for="firstname">First Name :</label>
