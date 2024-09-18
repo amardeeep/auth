@@ -1,6 +1,7 @@
 const pool = require("./pool");
 const getMessages = async () => {
-  console.log(await pool.query(`SELECT * from messages`));
+  const { rows } = await pool.query(`SELECT * from messages`);
+  return (messages = rows[0]);
 };
 const createUser = async (username, firstname, lastname, password) => {
   try {
