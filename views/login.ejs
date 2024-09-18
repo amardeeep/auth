@@ -6,6 +6,13 @@
     <title><%=title%></title>
   </head>
   <body>
-    <form action="/login" method="post">Login</form>
+    <form action="/login" method="post">
+      Login
+      <label for="username">Username :</label>
+      <input type="text" name="username" id="username" />
+      <label for="password">Password :</label>
+      <input type="password" name="password" id="password" />
+      <button type="submit">Log In</button>
+    </form>
   </body>
 </html>
